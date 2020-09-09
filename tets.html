@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .button {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+        }
+
+        .plus-element {
+            width: 80px;
+            height: 20px;
+            background-color: blue;
+            position: absolute;
+            left: 10px;
+            top: 40px;
+            transition: 1s;
+        }
+
+        .ver {
+            transform: rotate(90deg)
+        }
+
+        .active-hor {
+            transform: rotate(45deg)
+        }
+
+        .active-ver {
+            transform: rotate(135deg)
+        }
+    </style>
+</head>
+<body>
+<div class="button">
+    <div class="plus-element ver"></div>
+    <div class="plus-element hor"></div>
+</div>
+<div class="button">
+    <div class="plus-element ver"></div>
+    <div class="plus-element hor"></div>
+</div>
+<div class="button">
+    <div class="plus-element ver"></div>
+    <div class="plus-element hor"></div>
+</div>
+<div class="button">
+    <div class="plus-element ver"></div>
+    <div class="plus-element hor"></div>
+</div>
+<div class="button">
+    <div class="plus-element ver"></div>
+    <div class="plus-element hor"></div>
+</div>
+<script>
+    /* document.querySelector('.button').onclick = () => {
+         document.querySelector('.ver').classList.toggle('active-ver');
+         document.querySelector('.hor').classList.toggle('active-hor');
+     };*/
+
+    let element = document.querySelectorAll('.button');
+    let element2 = document.querySelectorAll('.ver');
+    let element3 = document.querySelectorAll('.hor');
+
+    for (let i = 0; i < element.length; i++) {
+        element[i].onclick = () => {
+            element2[i].classList.toggle('active-ver');
+            element3[i].classList.toggle('active-hor');
+        };
+    }
+
+
+</script>
+</body>
+</html>
